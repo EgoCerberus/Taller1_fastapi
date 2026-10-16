@@ -13,7 +13,7 @@ class TraineeModel(BaseModel):
     record_number: int
 
 
-class TraineeUpdateNodel(BaseModel):
+class TraineeUpdateModel(BaseModel):
     firstname: Optional[str] = None
     lastname: Optional[str] = None
     email: Optional[EmailStr] = None
