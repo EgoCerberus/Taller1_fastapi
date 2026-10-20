@@ -1,5 +1,4 @@
 from bson import ObjectId
-
 from src.models.database import collection
 from src.models.model import TraineeModel, TraineeUpdateModel, TraineeUpdateModel
 
@@ -16,10 +15,10 @@ def helper_trainee(trainee) -> dict:
     }
     
 def create_trainee(trainee: TraineeModel) -> dict:
-    trainee_dict =trainee.model_dump() #el método model_dump() de Pydantic convierte el modelo en un diccionario de Python.
-    result = collection.insert_one(trainee_dict) #aqui se inserta el diccionario en la colección de MongoDB y se obtiene un objeto de resultado que contiene información sobre la operación de inserción.
-    new_trainee = collection.find_one({"_id": result.inserted_id}) #aqui se busca el documento recién insertado en la colección utilizando el ID generado por MongoDB.
-    return helper_trainee(new_trainee) #aqui se llama a la función helper_trainee para convertir el documento de MongoDB en un diccionario de Python y se devuelve como resultado de la función create_trainee.
+    trainee_dict =trainee.model_dump() 
+    result = collection.insert_one(trainee_dict) 
+    new_trainee = collection.find_one({"_id": result.inserted_id}) 
+    return helper_trainee(new_trainee) 
 
 # obtener todos los aprendices
 def get_all_trainees():

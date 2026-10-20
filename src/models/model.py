@@ -1,7 +1,5 @@
 from typing import Optional
-
 from pydantic import BaseModel, EmailStr
-
 
 class TraineeModel(BaseModel):
     document: str
@@ -11,7 +9,6 @@ class TraineeModel(BaseModel):
     age: int
     program: str
     record_number: int
-
 
 class TraineeUpdateModel(BaseModel):
     firstname: Optional[str] = None
