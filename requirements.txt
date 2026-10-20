@@ -1,4 +1,6 @@
 fastapi
-pydantic
 uvicorn
+pydantic
 httpx
+pymongo
+dnspython
