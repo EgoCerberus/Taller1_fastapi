@@ -4,3 +4,4 @@ pydantic
 httpx
 pymongo
 dnspython
+email_validator
