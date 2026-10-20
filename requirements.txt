@@ -5,3 +5,6 @@ httpx
 pymongo
 dnspython
 email_validator
+
+# 1. Crear la interfaz en consola (view.py) para el consumo de la API desde CLI.
+# 2. Crear el archivo README.md con la documentación del proyecto.

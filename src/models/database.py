@@ -13,10 +13,10 @@ collection = db.traine
 try:
     # Intentar obtener información del servidor para verificar la conexión
     client.server_info()
-    print("Conexión a MongoDB exitosa.")
-    client.admin.command("ping")  # Verificar la conexión con un comando ping
+    client.admin.command("ping")
+    print("Conexión exitosa a MongoDB")
 except (ConnectionFailure, ServerSelectionTimeoutError) as e:
     print(f"Error al conectar a MongoDB: {e}")
 # finally:
-#     # Cerrar la conexión al final
+#     # Cerrar la conexión al cliente de MongoDB
 #     client.close()
